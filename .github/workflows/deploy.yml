@@ -43,4 +43,8 @@ jobs:
           az containerapp update \
             --name mycontainerapp \
             --resource-group myresourcegroup \
-            --image ${{ secrets.DOCKER_HUB_USERNAME }}/myapp:latest
+            --image ${{ secrets.DOCKER_HUB_USERNAME }}/myapp:latest \
+            --target-port 8000 \
+            --ingress external \
+            --environment mycontainerappenv \
+            --environment-variables APP_SETTING=my-setting
