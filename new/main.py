@@ -8,4 +8,4 @@ def salam():
 
 @app.get('/name/')
 def zain():
-    return "Muhammad Zain Attiq"
+    return "Muhammad Attiq"
